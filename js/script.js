@@ -11,43 +11,22 @@ burgerMenu.addEventListener('click', function () {
 
 // slider
 
-const sectionSlider = document.querySelector('section.slider')
-const sliderWrapper = sectionSlider.querySelector('.slider-wrapper')
-const sliderItems = sectionSlider.querySelectorAll('.slider-item')
-
-const sliderButtonPrev = sectionSlider.querySelector('.slider-button.prev')
-const sliderButtonNext = sectionSlider.querySelector('.slider-button.next')
-
-const sliderItemWidth = 1440
-const itemsLength = sliderItems.lenght 
-
-sliderWrapper.style.width = sliderItemWidth * itemsLength + 'px'
-
-sliderButtonPrev.addEventListener('click', prevSlide)
-sliderButtonNext.addEventListener('click', nextSlide)
-
 let offset = 0
+const sliderLine = document.querySelector('.slider-line')
 
-
-
-function nextSlide() {
-    offset = offset + sliderItemWidth
-    if (offset >= sliderItemWidth * itemsLength) {
-        return false
+document.querySelector('.slider-next').addEventListener('click', function(){
+    offset += 1440
+    if (offset > 2880) {
+        offset = 0
     }
-    sliderWrapper.style.left = -offset + 'px'
-}
+    sliderLine.style.left = -offset + 'px'
+})
 
-// let StopSlide = nextSlide()
 
-// if (StopSlide === itemsLength) {
-//     return false
-// }
-
-function prevSlide() {
-    offset = offset - sliderItemWidth
-    if(offset < 0) {
-        return false
+document.querySelector('.slider-prev').addEventListener('click', function(){
+    offset -= 1440
+    if (offset < 0) {
+        offset = 2880
     }
-    sliderWrapper.style.left = -offset + 'px'
-}
+    sliderLine.style.left = -offset + 'px'
+})

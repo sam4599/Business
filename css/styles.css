@@ -322,88 +322,49 @@ a {
 /* slider start */
 
 .slider {
-    margin-top: 160px;
-}
-
-.slider .container {
+    width: 1440px;
+    height: 780px;
     overflow: hidden;
-
+    margin-top: 100px;
 }
 
-.slider-wrapper {
+.slider-line {
+    height: 780px;
+    width: 4320px;
     display: flex;
     position: relative;
     left: 0;
-    transition: all ease .3s;
-    width: calc(1440px * 3)
+    transition: all ease 1s;
 }
 
-.slider-item {
-    width: 100%;
-    background: darkgreen;
+.button-slider {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 720px;
+    gap: 50px;
+    margin-top: 20px;
 }
 
-.slider-item:nth-child(1) {
-    background: url('../images/slider/slider-background.jpg') top center no-repeat;
+.slider-next,
+.slider-prev {
+    background: transparent;
+    border: 2px solid black;
+    padding: 10px 15px;
+    font-size: 24px;
+    border-radius: 5px;
 }
 
-.slider-item:nth-child(2) {
-    background: url('../images/slider/slider-background-2.jpg') top center no-repeat;
-}
-
-.slider-item:nth-child(3) {
-    background: url('../images/slider/slider-background-3.jpg') top center no-repeat;
-}
-
-
-.slider-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 40px;
-    background: #F2F6F7;
-    width: 60%;
-}
-
-.slider-title h3{
+.slider-next {
     color: #00486D;
-    font-family: 'DM Serif Text';
-    font-size: 32px;
-    line-height: 51px;
 }
-
-.slider-title p {
-    color: #00486D;
-    font-family: 'DM Serif Text';
-    font-size: 15px;
-    line-height: 35px;
-}
-
-.slider-nav {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 40px;
-}
-
-.slider-nav .slider-button {
-    padding: 12px 16px;
-    border: 1px solid #00486D;
-    color: #00486D;
-    font-size: 20px;
-    cursor: pointer;
+.slider-prev {
+    color:#3f448c;
 }
 
 /* slider end */
 /* recent-articles start */
 
 .recent-articles {
-    padding: 120px 0 160px;
+    padding: 160px 0 160px;
 }
 
 .recent-articles .container > h2 {
